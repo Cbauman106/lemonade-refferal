@@ -3,37 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Earn $15 Per Referral — Lemonade Renters Insurance</title>
+<title>Earn $15 Per Referral — Renters Insurance Referral Program</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --pink: #FF0083;
-    --pink-soft: #FFE1F0;
-    --pink-tint: #FFF3F9;
-    --ink: #282828;
-    --ink-soft: #55524F;
-    --white: #FFFFFF;
-    --line: rgba(40,40,40,0.10);
-    --mint: #E8FFF6;
+    --navy: #14213D;
+    --navy-deep: #0B1526;
+    --navy-soft: #22345A;
+    --rust: #BE5B3E;
+    --rust-bright: #D97A55;
+    --paper: #F6F2EA;
+    --paper-dim: #EAE4D6;
+    --ink: #1B1B18;
+    --cream-text: #F3EEE2;
+    --line: rgba(20,33,61,0.14);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--white);
+    background: var(--paper);
     color: var(--ink);
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3 {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
     letter-spacing: -0.01em;
-    color: var(--ink);
+    color: var(--navy);
   }
 
   .wrap {
@@ -47,20 +49,23 @@
   /* ---------- HERO ---------- */
 
   .hero {
-    background: var(--pink);
-    color: #fff;
-    padding: 76px 0 88px;
+    background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-soft) 100%);
+    color: var(--cream-text);
+    padding: 72px 0 84px;
     position: relative;
     overflow: hidden;
   }
 
-  .hero-blob {
+  .hero::after {
+    content: "";
     position: absolute;
+    right: -120px;
+    top: -120px;
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.10);
+    background: radial-gradient(circle, rgba(190,91,62,0.16) 0%, transparent 70%);
   }
-  .hero-blob.b1 { width: 380px; height: 380px; top: -160px; right: -100px; }
-  .hero-blob.b2 { width: 220px; height: 220px; bottom: -120px; left: -60px; background: rgba(255,255,255,0.08); }
 
   .hero-inner {
     position: relative;
@@ -74,18 +79,21 @@
   .eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    background: rgba(255,255,255,0.18);
-    padding: 8px 16px;
+    gap: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rust-bright);
+    border: 1px solid rgba(217,122,85,0.4);
+    padding: 7px 14px;
     border-radius: 100px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rust-bright); }
 
   .hero h1 {
-    font-size: clamp(32px, 4.6vw, 50px);
+    font-size: clamp(30px, 4.4vw, 48px);
     color: #fff;
     line-height: 1.12;
   }
@@ -94,15 +102,15 @@
     margin-top: 20px;
     max-width: 460px;
     font-size: 17px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(243,238,226,0.78);
   }
 
   .btn {
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 15px;
     padding: 16px 30px;
-    border-radius: 100px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     display: inline-flex;
@@ -112,61 +120,48 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .btn-white {
-    background: #fff;
-    color: var(--pink);
-    box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-  }
-  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,0.22); }
-
-  .btn-pink {
-    background: var(--pink);
+  .btn-primary {
+    background: var(--rust);
     color: #fff;
-    box-shadow: 0 10px 26px rgba(255,0,131,0.3);
+    box-shadow: 0 10px 26px rgba(190,91,62,0.35);
   }
-  .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(255,0,131,0.4); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(190,91,62,0.45); }
 
-  .hero-cta { margin-top: 36px; }
+  .hero-cta { margin-top: 34px; }
 
-  /* hero payout card */
   .payout-card {
     background: #fff;
     color: var(--ink);
-    border-radius: 24px;
+    border-radius: 20px;
     padding: 32px;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.28);
     text-align: center;
   }
   .payout-card .kicker {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--ink-soft);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 10px;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    opacity: 0.6;
   }
   .payout-card .amount {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 64px;
-    color: var(--pink);
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 60px;
+    color: var(--rust);
     line-height: 1;
   }
-  .payout-card .amount span { font-size: 26px; vertical-align: super; }
-  .payout-card .sub {
-    font-size: 14px;
-    color: var(--ink-soft);
-    margin-top: 8px;
-  }
-  .payout-card .divider {
-    height: 1px;
-    background: var(--line);
-    margin: 22px 0;
-  }
+  .payout-card .amount span { font-size: 24px; vertical-align: super; }
+  .payout-card .sub { font-size: 14px; color: #666; margin-top: 8px; }
+  .payout-card .divider { height: 1px; background: var(--line); margin: 22px 0; }
   .payout-card .mini-row {
     display: flex;
     justify-content: space-between;
     font-size: 13.5px;
-    color: var(--ink-soft);
+    color: #666;
     padding: 4px 0;
   }
   .payout-card .mini-row b { color: var(--ink); }
@@ -175,187 +170,168 @@
 
   section { padding: 80px 0; }
 
-  .section-head {
-    max-width: 580px;
-    margin-bottom: 48px;
-  }
+  .section-head { max-width: 580px; margin-bottom: 48px; }
 
   .section-head .tag {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--pink);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rust);
     margin-bottom: 12px;
     display: block;
   }
 
-  .section-head h2 {
-    font-size: clamp(26px, 3.2vw, 36px);
-    line-height: 1.18;
-  }
-
-  .section-head p {
-    margin-top: 14px;
-    font-size: 16px;
-    color: var(--ink-soft);
-  }
+  .section-head h2 { font-size: clamp(26px, 3.2vw, 36px); line-height: 1.18; }
+  .section-head p { margin-top: 14px; font-size: 16px; color: #56544b; }
 
   /* ---------- HOW IT WORKS ---------- */
 
   .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
   }
 
-  .step {
-    background: var(--pink-tint);
-    border-radius: 20px;
-    padding: 32px 28px 36px;
-    position: relative;
-  }
+  .step { background: #fff; padding: 32px 28px 36px; position: relative; }
 
   .step .num {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--pink);
-    color: #fff;
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 600;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
     font-size: 15px;
+    color: var(--rust);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .step h3 { font-size: 18px; margin-bottom: 10px; }
+  .step p { font-size: 14.5px; color: #56544b; }
+
+  .step:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -13px;
+    top: 40px;
+    color: var(--rust);
+    font-size: 18px;
+    background: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    z-index: 2;
+    border: 1px solid var(--line);
   }
-
-  .step h3 { font-size: 19px; margin-bottom: 10px; }
-  .step p { font-size: 14.5px; color: var(--ink-soft); }
 
   /* ---------- WHY IT FITS ---------- */
 
-  .fit-section { background: var(--ink); color: #fff; }
-  .fit-section .section-head h2 { color: #fff; }
-  .fit-section .section-head p { color: rgba(255,255,255,0.65); }
+  .fit-section { background: var(--navy); color: var(--cream-text); }
+  .fit-section .section-head h2 { color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+  .fit-section .section-head .tag { color: var(--rust-bright); }
+  .fit-section .section-head p { color: rgba(243,238,226,0.7); }
 
-  .fit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
+  .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 
   .fit-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 18px;
-    padding: 26px 26px;
+    background: rgba(243,238,226,0.05);
+    border: 1px solid rgba(243,238,226,0.12);
+    border-radius: 14px;
+    padding: 26px;
   }
-
-  .fit-card .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: var(--pink);
-    margin-bottom: 16px;
-  }
-
   .fit-card h3 {
     color: #fff;
     font-size: 16.5px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     margin-bottom: 8px;
   }
-
-  .fit-card p {
-    font-size: 14px;
-    color: rgba(255,255,255,0.62);
-  }
+  .fit-card p { font-size: 14px; color: rgba(243,238,226,0.65); }
 
   /* ---------- CALCULATOR ---------- */
 
-  .calc-section { background: var(--pink-tint); }
+  .calc-section { background: var(--paper); }
 
   .calc-panel {
     background: #fff;
-    border-radius: 24px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
     padding: 44px;
     display: grid;
     grid-template-columns: 1fr 0.85fr;
     gap: 44px;
     align-items: center;
-    box-shadow: 0 20px 50px rgba(255,0,131,0.08);
   }
 
   .calc-left h3 { font-size: 22px; margin-bottom: 10px; }
-  .calc-left p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 26px; }
+  .calc-left p { font-size: 14.5px; color: #56544b; margin-bottom: 26px; }
 
   .slider-group { margin-bottom: 24px; }
-
   .slider-group label {
     display: flex;
     justify-content: space-between;
     font-size: 13.5px;
     font-weight: 700;
-    color: var(--ink);
+    color: var(--navy);
     margin-bottom: 10px;
   }
-  .slider-group label .val { color: var(--pink); }
+  .slider-group label .val { font-family: 'DM Mono', monospace; color: var(--rust); }
 
   input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
     height: 6px;
     border-radius: 4px;
-    background: var(--pink-soft);
+    background: var(--paper-dim);
     outline: none;
   }
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: var(--pink);
+    background: var(--rust);
     cursor: pointer;
     border: 3px solid #fff;
-    box-shadow: 0 0 0 1px var(--pink);
+    box-shadow: 0 0 0 1px var(--rust);
   }
   input[type="range"]::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: var(--pink);
+    background: var(--rust);
     cursor: pointer;
     border: 3px solid #fff;
-    box-shadow: 0 0 0 1px var(--pink);
+    box-shadow: 0 0 0 1px var(--rust);
   }
 
   .calc-right {
-    background: var(--pink);
-    border-radius: 20px;
+    background: var(--navy);
+    border-radius: 14px;
     padding: 36px;
-    color: #fff;
+    color: var(--cream-text);
     text-align: center;
   }
   .calc-right .label {
-    font-size: 12.5px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.75);
+    color: rgba(243,238,226,0.6);
     margin-bottom: 10px;
   }
-  .calc-right .figure {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 52px;
-    line-height: 1;
-  }
-  .calc-right .per { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 6px; }
+  .calc-right .figure { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 50px; color: var(--rust-bright); line-height: 1; }
+  .calc-right .per { font-size: 13px; color: rgba(243,238,226,0.6); margin-top: 6px; }
 
   .calc-note {
     grid-column: 1 / -1;
     font-size: 12.5px;
-    color: #9a978f;
+    color: #8a8778;
     border-top: 1px dashed var(--line);
     padding-top: 16px;
     margin-top: 4px;
@@ -364,59 +340,61 @@
   /* ---------- FAQ ---------- */
 
   .faq-list { border-top: 1px solid var(--line); }
-
   .faq-item { border-bottom: 1px solid var(--line); padding: 24px 0; }
   .faq-item h3 {
     font-size: 16.5px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
+    color: var(--navy);
     margin-bottom: 6px;
   }
-  .faq-item p { font-size: 15px; color: var(--ink-soft); max-width: 680px; }
+  .faq-item p { font-size: 15px; color: #56544b; max-width: 680px; }
 
   /* ---------- FOOTER CTA ---------- */
 
   .cta-footer {
-    background: var(--pink);
-    color: #fff;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cream-text);
     text-align: center;
-    padding: 88px 0 64px;
+    padding: 84px 0 60px;
   }
 
   .cta-footer h2 {
     color: #fff;
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(26px, 3.6vw, 40px);
     max-width: 600px;
     margin: 0 auto 18px;
   }
 
   .cta-footer p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(243,238,226,0.7);
     max-width: 460px;
     margin: 0 auto 32px;
-    font-size: 16px;
+    font-size: 15.5px;
   }
 
   .footer-meta {
-    margin-top: 64px;
+    margin-top: 60px;
     padding-top: 26px;
-    border-top: 1px solid rgba(255,255,255,0.18);
-    font-size: 13px;
-    color: rgba(255,255,255,0.65);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
+    border-top: 1px solid rgba(243,238,226,0.14);
+    font-size: 12.5px;
+    color: rgba(243,238,226,0.5);
   }
-
-  .footer-meta .brand { font-family: 'Fredoka', sans-serif; font-weight: 600; color: #fff; font-size: 15px; }
+  .footer-meta .brand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--rust-bright);
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+  }
 
   @media (max-width: 760px) {
     .wrap { padding: 0 20px; }
     .hero-inner { grid-template-columns: 1fr; }
     .steps, .fit-grid { grid-template-columns: 1fr; }
+    .step:not(:last-child)::after { display: none; }
     .calc-panel { grid-template-columns: 1fr; padding: 28px; }
-    .footer-meta { flex-direction: column; text-align: center; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -428,15 +406,13 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-blob b1"></div>
-    <div class="hero-blob b2"></div>
     <div class="wrap hero-inner">
       <div>
-        <span class="eyebrow">🍋 Lemonade Referral Program</span>
-        <h1>Refer a tenant to Lemonade. Get $15.</h1>
-        <p class="lede">Your renters need insurance anyway — most leases require it. Share your link, they get covered in under 90 seconds, and you get paid $15 for every policy that closes.</p>
+        <span class="eyebrow"><span class="dot"></span>Independent Referral Affiliate</span>
+        <h1>Refer a tenant to Lemonade renters insurance. Earn $15.</h1>
+        <p class="lede">Your renters need insurance anyway — most leases require it. Share your referral link, they get covered in under 90 seconds, and you get paid $15 for every policy that closes.</p>
         <div class="hero-cta">
-          <a class="btn btn-white" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Get my referral link →</a>
+          <a class="btn btn-primary" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Get my referral link →</a>
         </div>
       </div>
       <div class="payout-card">
@@ -461,17 +437,17 @@
       </div>
       <div class="steps">
         <div class="step">
-          <span class="num">1</span>
+          <span class="num">01</span>
           <h3>Share your link</h3>
-          <p>Drop your personal Lemonade referral link into your lease packet, welcome email, or texts — wherever you already talk to tenants.</p>
+          <p>Drop your personal referral link into your lease packet, welcome email, or texts — wherever you already talk to tenants.</p>
         </div>
         <div class="step">
-          <span class="num">2</span>
+          <span class="num">02</span>
           <h3>They get covered</h3>
-          <p>Your tenant gets a renters insurance quote in under 90 seconds and buys a policy — a step most lease agreements already require.</p>
+          <p>Your tenant gets a renters insurance quote from Lemonade in under 90 seconds and buys a policy — a step most lease agreements already require.</p>
         </div>
         <div class="step">
-          <span class="num">3</span>
+          <span class="num">03</span>
           <h3>You get $15</h3>
           <p>You earn a flat $15 for every policy that closes through your link. No cap, no minimum volume required.</p>
         </div>
@@ -489,17 +465,14 @@
       </div>
       <div class="fit-grid">
         <div class="fit-card">
-          <div class="icon"></div>
           <h3>Lease signing</h3>
           <p>Renters insurance is already a checkbox on most lease packets. Attach your link there and it converts itself.</p>
         </div>
         <div class="fit-card">
-          <div class="icon"></div>
           <h3>Move-in day</h3>
           <p>Tenants are making decisions and filling out paperwork anyway — one more link is background noise, not friction.</p>
         </div>
         <div class="fit-card">
-          <div class="icon"></div>
           <h3>No liability, no licensing</h3>
           <p>You're not selling insurance or giving advice. You're sharing a link. Lemonade handles the quote, the policy, and the claims.</p>
         </div>
@@ -566,6 +539,10 @@
           <h3>What if my tenants already have renters insurance?</h3>
           <p>No problem — the link is just there for the ones who don't yet, or whose current policy is about to renew.</p>
         </div>
+        <div class="faq-item">
+          <h3>Is this an official Lemonade page?</h3>
+          <p>No — this page is run by an independent referral affiliate. It's not built, hosted, or endorsed by Lemonade. Clicking through takes you to Lemonade's own official site to complete your quote.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -575,11 +552,11 @@
     <div class="wrap">
       <h2>Ready to turn your lease packet into $15 a tenant?</h2>
       <p>Takes five minutes to set up. No cost, no licensing, no extra work at the desk.</p>
-      <a class="btn btn-pink" style="background:#fff;color:var(--pink);" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Get my referral link →</a>
+      <a class="btn btn-primary" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Get my referral link →</a>
 
       <div class="footer-meta">
-        <span class="brand">🍋 Lemonade Referral Program</span>
-        <span>Powered by Buffalo Corporate Housing</span>
+        <span class="brand">Independent Lemonade Referral Affiliate</span>
+        Not affiliated with, operated by, or endorsed by Lemonade Insurance. Referral link leads to Lemonade's official site.
       </div>
     </div>
   </footer>
