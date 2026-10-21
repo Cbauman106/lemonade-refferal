@@ -100,7 +100,7 @@
 
   .hero p.lede {
     margin-top: 20px;
-    max-width: 460px;
+    max-width: 520px;
     font-size: 17px;
     color: rgba(243,238,226,0.78);
   }
@@ -189,7 +189,7 @@
 
   .steps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
@@ -197,7 +197,7 @@
     overflow: hidden;
   }
 
-  .step { background: #fff; padding: 32px 28px 36px; position: relative; }
+  .step { background: #fff; padding: 28px 20px 32px; position: relative; }
 
   .step .num {
     font-family: 'DM Mono', monospace;
@@ -389,6 +389,11 @@
     margin-bottom: 8px;
   }
 
+  @media (max-width: 980px) {
+    .steps { grid-template-columns: 1fr 1fr; }
+    .step:nth-child(2n)::after { display: none; }
+  }
+
   @media (max-width: 760px) {
     .wrap { padding: 0 20px; }
     .hero-inner { grid-template-columns: 1fr; }
@@ -409,20 +414,20 @@
     <div class="wrap hero-inner">
       <div>
         <span class="eyebrow"><span class="dot"></span>Independent Referral Affiliate</span>
-        <h1>Refer a tenant to Lemonade renters insurance. Earn $15.</h1>
-        <p class="lede">Your renters need insurance anyway — most leases require it. Share your referral link, they get covered in as little as 90 seconds, and you get paid $15 for every policy that closes.</p>
+        <h1>Refer a renter to Lemonade renters insurance. Earn $15.</h1>
+        <p class="lede">For property managers, leasing agents, and apartment locators. Share your link, they can get a Lemonade quote in as little as 90 seconds, and you earn $15 for every policy that closes.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Get my referral link →</a>
+          <a class="btn btn-primary" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Sign up free</a>
         </div>
       </div>
       <div class="payout-card">
         <div class="kicker">You earn</div>
         <div class="amount"><span>$</span>15</div>
-        <div class="sub">per tenant referred</div>
+        <div class="sub">per closed policy</div>
         <div class="divider"></div>
         <div class="mini-row"><span>Cost to join</span><b>Free</b></div>
-        <div class="mini-row"><span>Time to set up</span><b>5 minutes</b></div>
-        <div class="mini-row"><span>Policies you sell</span><b>None — just share a link</b></div>
+        <div class="mini-row"><span>Your link</span><b>After approval</b></div>
+        <div class="mini-row"><span>Policies you sell</span><b>None. You share a link</b></div>
       </div>
     </div>
   </header>
@@ -432,23 +437,28 @@
     <div class="wrap">
       <div class="section-head">
         <span class="tag">How it works</span>
-        <h2>Three steps. You're already doing step one.</h2>
-        <p>You hand every new tenant a move-in packet anyway. This just adds one line to it.</p>
+        <h2>Four steps. Sign up comes first.</h2>
+        <p>Apartment locators, leasing agents, and property managers all need their own link before they share it.</p>
       </div>
       <div class="steps">
         <div class="step">
           <span class="num">01</span>
-          <h3>Share your link</h3>
-          <p>Drop your personal referral link into your lease packet, welcome email, or texts — wherever you already talk to tenants.</p>
+          <h3>Sign up free</h3>
+          <p>Sign up free with Lemonade, get approved, then copy your personal link from your dashboard.</p>
         </div>
         <div class="step">
           <span class="num">02</span>
-          <h3>They get covered</h3>
-          <p>Your tenant gets a renters insurance quote from Lemonade in as little as 90 seconds and buys a policy — a step most lease agreements already require.</p>
+          <h3>Share your link</h3>
+          <p>Apartment locators: add it to the email you send after a client signs. Leasing agents and property managers: welcome email or lease packet.</p>
         </div>
         <div class="step">
           <span class="num">03</span>
-          <h3>You get $15</h3>
+          <h3>They get covered</h3>
+          <p>They get a renters insurance quote from Lemonade in as little as 90 seconds and can buy a policy.</p>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <h3>You earn $15</h3>
           <p>You earn a flat $15 for every policy that closes through your link. No cap, no minimum volume required.</p>
         </div>
       </div>
@@ -460,17 +470,17 @@
     <div class="wrap">
       <div class="section-head">
         <span class="tag">Why this fits your desk</span>
-        <h2>Built around the moments you're already managing.</h2>
-        <p>This isn't a new task. It's a payout attached to a conversation you're already having.</p>
+        <h2>For locators, leasing agents, and property managers.</h2>
+        <p>Add the link to the email or packet you already send.</p>
       </div>
       <div class="fit-grid">
         <div class="fit-card">
-          <h3>Lease signing</h3>
-          <p>Renters insurance is already a checkbox on most lease packets. Attach your link there and it converts itself.</p>
+          <h3>Apartment locators</h3>
+          <p>Add it to the email you send after a client signs.</p>
         </div>
         <div class="fit-card">
-          <h3>Move-in day</h3>
-          <p>Tenants are making decisions and filling out paperwork anyway — one more link is background noise, not friction.</p>
+          <h3>Leasing agents and property managers</h3>
+          <p>Put your link in the welcome email, or with the lease packet if you use one.</p>
         </div>
         <div class="fit-card">
           <h3>No liability, no licensing</h3>
@@ -536,7 +546,7 @@
           <p>Your $15 is tracked per closed policy through your unique link and paid out on a regular schedule — details confirmed when you sign up.</p>
         </div>
         <div class="faq-item">
-          <h3>What if my tenants already have renters insurance?</h3>
+          <h3>What if they already have renters insurance?</h3>
           <p>No problem — the link is just there for the ones who don't yet, or whose current policy is about to renew.</p>
         </div>
         <div class="faq-item">
@@ -550,9 +560,9 @@
   <!-- FOOTER CTA -->
   <footer class="cta-footer">
     <div class="wrap">
-      <h2>Ready to turn your lease packet into $15 a tenant?</h2>
-      <p>Takes five minutes to set up. No cost, no licensing, no extra work at the desk.</p>
-      <a class="btn btn-primary" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Get my referral link →</a>
+      <h2>Sign up free. Get your own link.</h2>
+      <p>No cost to join. After you're approved, copy your link from your dashboard and share it.</p>
+      <a class="btn btn-primary" href="https://go.lemonade.com/visit/?bta=37904&brand=lemonadeaffiliates">Sign up free</a>
 
       <div class="footer-meta">
         <span class="brand">Independent Lemonade Referral Affiliate</span>
